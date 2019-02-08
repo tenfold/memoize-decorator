@@ -6,7 +6,7 @@
     "outDir": "./lib",
     "strict": true,
     "experimentalDecorators": true,
-    "lib": [ "es2015" ]
+    "lib": [ "es2015", "dom" ]
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
