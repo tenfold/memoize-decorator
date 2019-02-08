@@ -1,5 +1,5 @@
 {
-  "name": "ts-library-template",
+  "name": "memoize-decorator",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -12,11 +12,12 @@
     "preversion": "npm run build",
     "postversion": "publish-to-git --force"
   },
-  "author": "",
+  "author": "Damian Kaczmarek <rush@tenfold.com>",
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
     "@types/jest": "^23.0.0",
+    "@types/memoizee": "^0.4.2",
     "jest": "^23.1.0",
     "prettier": "^1.16.4",
     "publish-to-git": "^1.1.7",
@@ -27,5 +28,12 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "core-decorators": "^0.20.0",
+    "memoizee": "^0.4.14",
+    "memoizee-rx": "github:tenfold/memoizee-rx#semver:^v1.0.8",
+    "moment": "^2.24.0",
+    "rxjs": "^6.4.0"
+  }
 }
