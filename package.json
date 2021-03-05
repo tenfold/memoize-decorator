@@ -1,6 +1,6 @@
 {
   "name": "memoize-decorator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,7 +33,6 @@
     "core-decorators": "^0.20.0",
     "memoizee": "^0.4.14",
     "memoizee-rx": "github:tenfold/memoizee-rx#semver:^v1.0.8",
-    "moment": "^2.24.0",
     "rxjs": "^6.4.0"
   }
 }

@@ -1,15 +1,11 @@
 import { decorate } from 'core-decorators';
 export { autobind as AutoBind } from 'core-decorators';
 import * as memoizee from 'memoizee';
-import { duration, unitOfTime } from 'moment';
 
 import { memoizeeRx } from 'memoizee-rx';
-
-type HumanDuration = [number, unitOfTime.DurationConstructor];
-
 export interface MemoizeOptions extends memoizee.Options {
     observable?: boolean;
-    ttl?: HumanDuration;
+    ttl?: number;
 }
 
 export function Memoize(this: any, options: MemoizeOptions) {
@@ -18,7 +14,7 @@ export function Memoize(this: any, options: MemoizeOptions) {
     if (options.ttl) {
         options = {
             ...options,
-            maxAge: duration(...options.ttl).asMilliseconds(),
+            maxAge: options.ttl,
         };
     }
     return decorate.call(this, wrapperFunction, options);
